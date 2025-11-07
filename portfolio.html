@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: white;
+      color: black;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: black;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e63946;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #111, #222);
+      color: white;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #ccc;
+    }
+
+    .projects {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .project-content p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .project a {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    .project a:hover {
+      background: #c71c2b;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .contact p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .contact a {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .contact a:hover {
+      background: #c71c2b;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      header {
+        flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+    .profilo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  flex-wrap: wrap;
+}
+
+.profilo-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+.profilo-testo {
+  max-width: 600px; 
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bencheikh Youssef</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#projects">Progetti</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+<section class="hero" id="about">
+  <div class="profilo-container">
+    <img src="foto_cv.jpg" alt="Foto profilo" class="profilo-img">
+    <div class="profilo-testo">
+      <h2>Ciao, sono Youssef Bencheikh</h2>
+      <p>Sono uno sviluppatore web appassionato di design e soluzioni creative. Mi piace creare esperienze digitali intuitive e moderne.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="projects" id="projects">
+    <h2>I miei progetti</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbszukY8LpnnVYv98UtNzonkcU1JimQ2Kfg&s" alt="Progetto 1">
+        <div class="project-content">
+          <h3>CV</h3>
+          <p>Il mio curriculum per presentare i miei lavori e la mia esperienza professionale.</p>
+          <a href="Bencheikh_Youssef_cv.pdf" target="_blank">Apri il CV</a>
+        </div>
+      </div>
+      <div class="project">
+  <img src="https://picsum.photos/id/1005/400/200" alt="Progetto 2">
+  <div class="project-content">
+    <h3>App Meteo</h3>
+    <p>Un'app responsive che mostra le previsioni meteo in tempo reale per qualsiasi città.</p>
+    <a href="meteo.html" target="_blank">Apri l'app Meteo</a> 
+  </div>
+</div>
+
+      <div class="project">
+        <img src="data:image/png;base64,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" alt="Progetto 3">
+               <div class="project-content"></div>
+        <h3>Youtube</h3>
+          <p>Un sito che ricorda molto youtube</p>
+             <a href="YT.html" target="_blank">Apri il primo progetto</a> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2> Contattami</h2>
+    <p>Hai un’idea o un progetto? Parliamone insieme!</p>
+    <a href="email.html">Scrivimi</a>
+  </section>
+
+  <footer>
+    © 2025 Bencheikh Youssef – Tutti i diritti riservati
+  </footer>
+</body>
+</html>
